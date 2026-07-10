@@ -1,33 +1,36 @@
 html, body {
-    margin: 0;
     width: 100%;
     height: 100%;
+    margin: 0;
     overflow: hidden;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background: #202020;
+    background: #1a1a1a;
 }
 
 #unity-container {
     position: relative;
-
-    width: min(95vw, calc(95vh * 9 / 16));
-    aspect-ratio: 9 / 16;
 }
 
+/* Размер окна телефона */
 #unity-container.unity-desktop {
-    width: min(95vw, calc(95vh * 9 / 16));
-    aspect-ratio: 9 / 16;
+    width: 405px;
+    height: 720px;
+}
+
+/* Для мобильных устройств */
+#unity-container.unity-mobile {
+    width: 100%;
+    height: 100%;
 }
 
 #unity-canvas {
     width: 100%;
     height: 100%;
     display: block;
-    background: #231F20;
 }
 #unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
 #unity-canvas { background: #231F20 }
